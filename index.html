@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Boostrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery Library -->
+    <script type='text/javascript' src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script type='text/javascript' src="assets/javascript/game.js"></script>
+    
+    <title>CrystalsCollector!</title>
+</head>
+
+<body onload="randomNum()">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 pageTitle">
+                <h1>CrystalsCollector!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 instructions">
+                <br>
+                <p>You will be given a random number at the start of the game</p>
+                <br>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amoung of points to you total score.</p>
+                <br>
+                <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+                <br>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <br>
+                <p>Each time when the game starts, the game will change the value of each crystal.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 randomNum">
+                <h2>Random Number</h2>
+            </div>
+            <div class="col-md-1 winLoss">
+                <p>Wins:</p>
+                <p>Losses:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 redBut">
+                <button class="red">Red Crystal</button>
+            </div>
+            <div class="col-md-2 blueBut">
+                <button class="blue">Blue Crystal</button>
+            </div>
+            <div class="col-md-2 yellowBut">
+                <button class="yellow">Yellow Crystal</button>
+            </div>
+            <div class="col-md-2 greenBut">
+                <button class="green">Green Crystal</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 totalScore">
+                <p>Your total score is:</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 userMath">
+                <h2>This is where your crystal clicks will add up</h2>
+            </div>
+        </div>
+
+    </div>
+</body>

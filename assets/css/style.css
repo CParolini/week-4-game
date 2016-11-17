@@ -1,0 +1,64 @@
+body {
+    background-image: url("http://static.tumblr.com/vy2pzfk/46zls6lto/deserve_bg.jpg");
+    background-color: #cccccc;
+}
+
+.redBut {
+    width: 0px;
+    margin: 0px 35px 0px 0px;
+    padding-left: 0px;
+    background-image: url("https://thumbs.dreamstime.com/t/comic-cartoon-ruby-retro-book-style-52936902.jpg");
+    background-color: white;
+}
+
+.blueBut {
+    width: 0px;
+    margin: 0px 35px 0px 0px;
+}
+
+.yellowBut {
+    width: 0px;
+    margin: 0px 35px 0px 0px;
+}
+
+.greenBut {
+    width: 0px;
+    margin: 0px 35px 0px 0px;
+}
+
+.pageTitle {
+    background-color: #cc7133;
+    margin: 10px 0px 10px 0px;
+    width: 323px;
+}
+
+.instructions {
+    background-color: #fbe6cf;
+    margin: 0px 0px 10px 0px;
+}
+
+.randomNum {
+    background-color: #53c987;
+    height: 100px;
+    margin: 0px 10px 10px 0px;
+}
+
+.totalScore {
+    background-color: #1fa395;
+    margin: 10px 0px 10px 0px;
+}
+
+.userMath {
+    background-color: #1fa395;
+    margin-bottom: 20px;
+}
+
+.winLoss {
+    background-color: #38fefc;
+    height: 100px;
+}
+
+button {
+    float: left;
+    margin: 0px;
+}
