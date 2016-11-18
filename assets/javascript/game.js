@@ -1,6 +1,3 @@
-/* Array of Gems */
-gems = ['assets/images/redcrystal.jpeg', 'assets/images/bluecrystal.jpg', 'assets/images/orangecrystal.jpeg', 'assets/images/greencrystal.png'];
-
 /*Declaration of Variables */
 
 var wins = 0;
