@@ -1,64 +1,82 @@
 body {
-    background-image: url("http://static.tumblr.com/vy2pzfk/46zls6lto/deserve_bg.jpg");
-    background-color: #cccccc;
+    font-family: 'Questrial', sans-serif;
 }
 
-.redBut {
-    width: 0px;
-    margin: 0px 35px 0px 0px;
-    padding-left: 0px;
-    background-image: url("https://thumbs.dreamstime.com/t/comic-cartoon-ruby-retro-book-style-52936902.jpg");
-    background-color: white;
+.mkImage {
+    height: 150px;
+    width: 150px;
 }
 
-.blueBut {
-    width: 0px;
-    margin: 0px 35px 0px 0px;
+p {
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px black;
 }
 
-.yellowBut {
-    width: 0px;
-    margin: 0px 35px 0px 0px;
+#instructions {
+    float: none;
+    margin-bottom: 27px;
+    text-align: center;
 }
 
-.greenBut {
-    width: 0px;
-    margin: 0px 35px 0px 0px;
+.crystal {
+    margin-left: 23%
 }
 
-.pageTitle {
-    background-color: #cc7133;
-    margin: 10px 0px 10px 0px;
-    width: 323px;
+#allContent {
+    width: 100%;
 }
 
-.instructions {
-    background-color: #fbe6cf;
-    margin: 0px 0px 10px 0px;
+body {
+    background-image: url("../images/fieldbckground.jpg");
+    background-size: inherit;
 }
 
-.randomNum {
-    background-color: #53c987;
-    height: 100px;
-    margin: 0px 10px 10px 0px;
+#winOrLoseNotification {
+    text-align: center;
+    color: #e61718;
+    font-size: 40px;
 }
 
-.totalScore {
-    background-color: #1fa395;
-    margin: 10px 0px 10px 0px;
+.mainText {
+    background-color: transparent;
+    border-style: none;
 }
 
-.userMath {
-    background-color: #1fa395;
-    margin-bottom: 20px;
+.crystalInfo {
+    background-color: transparent;
+    border-style: none;
 }
 
-.winLoss {
-    background-color: #38fefc;
-    height: 100px;
+.banner {
+    background-color: transparent;
+    border-style: none;
 }
 
-button {
-    float: left;
-    margin: 0px;
+.bannerAlign {
+    height: 175px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+#button1 {
+    background-color: transparent;
+    border: none;
+}
+
+#button2 {
+    background-color: transparent;
+    border: none;
+}
+
+#button3 {
+    background-color: transparent;
+    border: none;
+}
+
+#button4 {
+    background-color: transparent;
+    border: none;
 }

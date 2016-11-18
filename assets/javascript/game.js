@@ -1,119 +1,100 @@
-// Global Variables
-// =========================================
-// Arrays and Variables for holding data
-$(document).ready(function() {
-    // Holds random number generated at start of game
-    var randomNum;
+/* Array of Gems */
+gems = ['assets/images/redcrystal.jpeg', 'assets/images/bluecrystal.jpg', 'assets/images/orangecrystal.jpeg', 'assets/images/greencrystal.png'];
 
-    // Holds random number for red crystal
-    var redNum;
+/*Declaration of Variables */
 
-    // Holds random number for blue crystal
-    var blueNum;
+var wins = 0;
+var losses = 0;
+var userInput = 0;
+var winAudio = new Audio('assets/images/cheer.mp3');
+var winAudioLoss = new Audio('assets/images/boo.mp3')
+    // var randomNumber = ;
+var redCrystal = 0;
+var blueCrystal = 0;
+var greenCrystal = 0;
+var orangeCrystal = 0;
 
-    // Holds random number for yellow crystal
-    var yellowNum;
 
-    // Holds random number for green crystal
-    var greenNum;
+/* Functions that will be used */
+// newGems();
+var totalScore = minMaxRandom(19, 120);
+createGems();
 
-    // Game counter
-    var winCounter = 0;
-    var lossCounter = 0;
+$("#totalScore").text(totalScore);
+// newGame();
 
-})
+function winLoss(totalScore, userInput) {
+    if (totalScore === userInput) {
+        $('#status').text('You won!!!!');
+        wins++;
+        $('#wins').text(wins);
+        console.log(wins)
+        $('#crystals').empty();
+        $('#winOrLoseNotification').html("TOUCHDOWN");
+        winAudio.play();
+        reset();
 
-// Functions (Reusable blocks of code that I will call upon when needed)
-// =========================================
 
-// startGame()
-// Its how we we will start and restart the game. (Note: It's not being run here. It's just being made for future use.)
-function startGame() {
-
-    //Random number chosen
-    randomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-
-    //Random number for red crystal
-    redNum = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-
-    //Random number for blue crystal
-    blueNum = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-
-    //Random number for yellow crystal
-    yellowNum = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-
-    //Random number for green crystal
-    greenNum = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-
-    console.log(randomNum);
-    console.log(redNum);
-    console.log(blueNum);
-    console.log(yellowNum);
-    console.log(greenNum);
-
+    } else if (userInput > totalScore) {
+        $('#status').text('You lost!')
+        losses++;
+        $('#loss').text(losses);
+        $('#crystals').empty();
+        $("#losses").text(losses);
+        $('#winOrLoseNotification').html("INTERCEPTION");
+        winAudioLoss.play();
+        reset();
+    } else {
+        $('#winOrLoseNotification').html("");
+    }
 }
 
-function ranNumPush() {
-    $(".ranNum").html(randomNum);
+//this funtion closes on line 51.  This will return a random number between the max and the min number.
+function minMaxRandom(min, max) {
+    var randomNumber = Math.floor((Math.random() * (max - min) + min));
+    return randomNumber;
+
+};
+
+//This section is for creating click listeners on each of the crystals.
+$("#redCrystal").on("click", function() {
+    userInput += redCrystal;
+    //userInput = userInput+redCystal
+    $("#currentScore").text(userInput);
+    winLoss(totalScore, userInput);
+
+});
+$("#blueCrystal").on("click", function() {
+    userInput += blueCrystal;
+    $("#currentScore").text(userInput);
+    winLoss(totalScore, userInput);
+});
+$("#greenCrystal").on("click", function() {
+    userInput += greenCrystal;
+    $("#currentScore").text(userInput);
+    winLoss(totalScore, userInput);
+});
+
+
+
+$("#orangeCrystal").on("click", function() {
+    userInput += orangeCrystal;
+    $("#currentScore").text(userInput);
+    winLoss(totalScore, userInput);
+
+});
+
+function reset() {
+    userInput = 0;
+    totalScore = minMaxRandom(19, 120);
+    $("#totalScore").text(totalScore);
+    createGems();
+    var newGame = true;
 }
 
-function redNumPush() {
-    $(".red").html(redNum);
+function createGems() {
+    redCrystal = minMaxRandom(1, 12);
+    blueCrystal = minMaxRandom(1, 12);
+    greenCrystal = minMaxRandom(1, 12);
+    orangeCrystal = minMaxRandom(1, 12);
 }
-
-function blueNumPush() {
-    $(".blue").html(Num);
-}
-
-function yellowNumPush() {
-    $(".yellow").html(yellowNum);
-}
-
-function greenNumPush() {
-    $(".green").html(greenNum);
-}
-
-$(document).on("click", "button", function() {
-
-            if ($(this).hasClass("red")) {
-
-                console.log('red click');
-            } if ($(this).hasClass("blue")) {
-              console.log('blue click');
-            } if ($(this).hasClass("yellow")) {
-              console.log('yellow clikc');
-            } if ($(this).hasClass("green")) {
-              console.log('green click')
-            }
-        })
-
-        // function restartGame() {
-        //     document.querySelector("#guessed-letters").innerHTML = "";
-        //     this.wordInPlay = null;
-        //     this.lettersOfTheWord = [];
-        //     this.matchedLetters = [];
-        //     this.guessedLetters = [];
-        //     this.guessesLeft = 0;
-        //     this.totalGuesses = 0;
-        //     this.letterGuessed = null;
-        //     this.setupGame();
-        //     this.rebuildWordView();
-        // }
-        //
-        // // function randomNum(min, max) {
-        // //     min = Math.ceil(19);
-        // //     max = Math.floor(120);
-        // //     console.log(Math.floor(Math.random() * (max - min + 1)) + min);
-        // // }
-        // //
-        // // function ranButNum(min, max) {
-        // //     min = Math.ceil(1);
-        // //     max = Math.floor(12);
-        // //     console.log(Math.floor(Math.random() * (max - min + 1)) + min);
-        // // }
-
-
-        // Main Process
-        // =========================================
-        // Initiates the code the first time
-startGame();
