@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mortal Kombat Crystal Collector</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Ceviche+One|Press+Start+2P|Six+Caps|VT323" rel="stylesheet">
+    <!--bootstrap link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--stylesheet links-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset2.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default col-md-12 banner">
+                <img src="assets/images/mkbanner.jpg" class="bannerAlign">
+            </div>
+            <div class="row" id="intructions">
+                <div class="panel panel-default col-md-12 mainText">
+                    <br>
+                    <p>A random number is generated at the start of every game.</p>
+                    <br>
+                    <p>Each NFL Logo below has a hidden random number associated with it. <br>CLICK TO FIND OUT WHAT IT IS!</p>
+                    <br>
+                    <p>You win the game by matching your total score to the random number,
+                        <br>
+                        <br> you lose the game if your total score goes above the random number.</p>
+                    <br>
+                    <p>The value of each fighters attack is hidden from you until you click on it.</p>
+                    <br>
+                    <p>Each time when the game starts, the game will change the value of each fighters attack.</p>
+                </div>
+                <div class="row">
+                    <div class="panel panel-default col-md-12 crystalInfo">
+                        <div class="crystal">
+                            <button id="button1"><img id="blueCrystal" class="mkImage" src="http://vignette2.wikia.nocookie.net/mkwikia/images/c/cd/Kitana_MKX_Render.png/revision/latest?cb=20150410150630"></button>
+                            <button id="button2"><img id="greenCrystal" class="mkImage" src="https://upload.wikimedia.org/wikipedia/en/4/4e/RaidenMKXrender.png"></button>
+                            <button id="button3"><img id="redCrystal" class="mkImage" src="http://vignette1.wikia.nocookie.net/mkwikia/images/e/e4/Liu_Kang_5.png/revision/latest?cb=20150516165245"></button>
+                            <button id="button4"><img id="orangeCrystal" class="mkImage" src="http://vignette3.wikia.nocookie.net/mkwikia/images/a/ad/Scorpion_MKX_Render.png/revision/latest?cb=20160515093908"></button>
+                        </div>
+                        <div class="row" id="intructions">
+                            <div class="panel panel-default panelFuture yellowBackground col-md-12 crystalInfo">
+                                <div id="winOrLoseNotification">
+                                    <p></p>
+                                </div>
+                                <div>
+                                    <p>wins: <span id="wins"> </span></p>
+                                </div>
+                                <span>
+            <p>losses: <span id="losses"></span></p>
+                                </span>
+                                <span>
+            <p id ="numberToGuess"></p>
+        </span>
+                                <div>
+                                    <p>Your current score is currently: <span id="currentScore"> </span></p>
+                                </div>
+                                <div>
+                                    <p>The number you are guessing is: <span id="totalScore"> </span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--JS Link and JQuery-->
+                        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+                        <script src="assets/javascript/game2.js"></script>
+</body>
+
+</html>

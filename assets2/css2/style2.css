@@ -1,0 +1,56 @@
+.mkImage {
+        height: 150px;
+        width: 150px;
+    }
+
+    p {
+        font-family: font-family: 'VT323', monospace;
+        font-size: 25px;
+        text-align: center;
+        color: #e61718;
+    }
+
+    #instructions {
+        float: none;
+        margin-bottom: 27px;
+        text-align: center;
+    }
+
+    .crystal {
+        margin-left: 23%
+    }
+
+    #allContent {
+        width: 100%;
+    }
+
+    body {
+        background-image: url("../images/mkbackground3.jpg");
+        background-size: inherit;
+    }
+
+    #winOrLoseNotification {
+        text-align: center;
+        color: #e61718;
+        font-size: 40px;
+    }
+
+    .mainText {
+        background-color: transparent;
+        border-style: none;
+    }
+
+    .crystalInfo {
+        background-color: transparent;
+        border-style: none;
+    }
+
+    .banner {
+        background-color: transparent;
+        border-style: none;
+    }
+
+    .bannerAlign {
+        height: 200px;
+        width: 100%;
+    }
